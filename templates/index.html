@@ -11,7 +11,7 @@
             <div class="jumbotron p-3 bg-light-subtle">
 
                 <h2>Manage <b>Employees</b> <button type="button" class="btn btn-success float-end"
-                data-toggle="modal" data-target="#mymodal">Add New Employees</button> </h2>
+                data-bs-toggle="modal" data-bs-target="#mymodal">Add New Employees</button> </h2>
 
                 <table class="table table-hover table-dark">
 
@@ -29,57 +29,98 @@
                         <td>sakib@gmail.com</td>
                         <td>011122454</td>
                         <td>
-                            <a href="" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit">Edit</a>
+                            <a href="" class="btn btn-warning btn-xs" data-bs-toggle="modal" data-bs-target="#modaledit">Edit</a>
                             <a href="" class="btn btn-danger btn-xs" onclick="return confirm('Are your sure you want to delete ?')">Delete</a>
                         </td>
                     </tr>
 
-                </table>
+                <!-- Modal Edit Employee -->
 
+                <div id="modaledit" class="modal fade" role="dialog" aria-hidden="true">
+
+                    <div class="modal-dialog">
+
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <h4>Update Employee Information</h4>
+                            </div>
+
+                            <div class="modal-body">
+                                <form action="" method="POST">
+                                      <div class="form-group">
+                                          <label>Name:</label>
+                                          <input type="text" class="form-control" name="name" required="1">
+                                      </div>
+                                      <div class="form-group">
+                                          <label>Email:</label>
+                                          <input type="email" class="form-control" name="email" required="1">
+                                      </div>
+                                      <div class="form-group">
+                                          <label>Phone:</label>
+                                          <input type="tel" class="form-control" name="phone" required="1">
+                                      </div>
+                                    <br>
+                                      <div class="form-group p-1">
+                                          <button class="btn btn-primary" type="submit">Update</button>
+                                      </div>
+                                </form>
+
+                            <dev class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </dev>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </table>
             </div>
+
 
             <!-- Modal Add Employee -->
 
-<div id="mymodal" class="modal fade" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
+            <div id="mymodal" class="modal fade" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
 
-        <div class="modal-content">
+                    <div class="modal-content">
 
-            <div class="modal-header">
-                <h4>Add Employee</h4>
+                        <div class="modal-header">
+                            <h4>Add Employee</h4>
+                        </div>
+
+                        <div class="modal-body">
+                            <form action="" method="POST">
+                                  <div class="form-group">
+                                      <label>Name:</label>
+                                      <input type="text" class="form-control" name="name" required="1">
+                                  </div>
+                                  <div class="form-group">
+                                      <label>Email:</label>
+                                      <input type="email" class="form-control" name="email" required="1">
+                                  </div>
+                                  <div class="form-group">
+                                      <label>Phone:</label>
+                                      <input type="tel" class="form-control" name="phone" required="1">
+                                  </div>
+                                <br>
+                                  <div class="form-group p-1">
+                                      <button class="btn btn-primary" type="submit">Add Employee</button>
+                                  </div>
+                            </form>
+
+                        <dev class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </dev>
+
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="modal-body">
-                <form action="" method="POST">
-                      <div class="form-group">
-                          <label>Name:</label>
-                          <input type="text" class="form-control" name="name" required="1">
-                      </div>
-                      <div class="form-group">
-                          <label>Email:</label>
-                          <input type="email" class="form-control" name="email" required="1">
-                      </div>
-                      <div class="form-group">
-                          <label>Phone:</label>
-                          <input type="number" class="form-control" name="phone" required="1">
-                      </div>
-                      <div class="form-group">
-                          <button class="btn btn-primary" type="submit">Add Employee</button>
-                      </div>
-                </form>
-
-            </div>
         </div>
     </div>
 </div>
-
-        </div>
-    </div>
-</div>
-
-
-
-
 
 
 {% endblock %}
